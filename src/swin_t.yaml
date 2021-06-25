@@ -1,0 +1,28 @@
+---
+main:
+    mode: 'train'
+
+train:
+    device: "cuda:0"
+    n_epochs: 100
+    resume: false
+    save_dir: "../checkpoints"
+
+dataset:
+    size: 224
+    train: "../Datasets/train"
+    val: "../Datasets/val"
+    test: "../Datasets/test"
+
+dataloader:
+    batch_size: 32
+    num_workers: 8
+
+# Model
+model:
+    encoder: 'swin_t'
+
+# Adam Optimizer
+optimizer:
+    lr: 0.0001
+    weight_decay: 0.0001
